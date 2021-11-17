@@ -77,13 +77,6 @@ app.get("/", async (req, res) => {
     ${styledStyleTags}`
   );
 
-  indexHTML = indexHTML.replace(
-    "{{HEAD}}",
-    `${linkTags}
-    ${styleTags}
-    ${styledStyleTags}`
-  );
-
   indexHTML = indexHTML.replace("{{SCRIPT}}", `${scriptTags}`);
 
   res.send(indexHTML);
